@@ -119,6 +119,13 @@
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .resource-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
 
   .icon-box {

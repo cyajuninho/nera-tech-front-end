@@ -121,18 +121,14 @@
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow:
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
-    border: 1px solid #e2e8f0;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Removed border for cleaner look with shadow */
   }
 
   .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow:
-      0 10px 15px -3px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-hover);
   }
 
   .icon {

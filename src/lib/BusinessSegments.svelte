@@ -97,12 +97,13 @@
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
   }
 
   .segment-card:hover {
     border-color: var(--secondary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-hover);
   }
 
   .emoji {

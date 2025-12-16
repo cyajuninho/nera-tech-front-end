@@ -103,7 +103,7 @@
     aspect-ratio: 4/3;
     background: white;
     border-radius: 1rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-xl);
     padding: 1rem;
     position: relative;
   }
