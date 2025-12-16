@@ -1,11 +1,15 @@
+<script>
+  import { fade } from './animate.js';
+</script>
+
 <section id="testimonials" class="section bg-light">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" use:fade>
       <h2>O que nossos clientes dizem</h2>
     </div>
 
     <div class="testimonials-grid">
-      <div class="testimonial-card">
+      <div class="testimonial-card" use:fade={{ delay: 0 }}>
         <div class="quote">“</div>
         <p class="text">Depois que implementamos o sistema, nosso caixa ficou mais rápido e preciso. O estoque nunca mais deu divergência.</p>
         <div class="author">
@@ -13,7 +17,7 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
+      <div class="testimonial-card" use:fade={{ delay: 100 }}>
         <div class="quote">“</div>
         <p class="text">O módulo de mesas e delivery é simplesmente perfeito. Agilizou muito nosso atendimento.</p>
         <div class="author">
@@ -21,7 +25,7 @@
         </div>
       </div>
 
-      <div class="testimonial-card">
+      <div class="testimonial-card" use:fade={{ delay: 200 }}>
         <div class="quote">“</div>
         <p class="text">O WhatsApp integrado salvou meu atendimento. Consigo enviar orçamentos e notas em segundos.</p>
         <div class="author">

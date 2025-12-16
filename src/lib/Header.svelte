@@ -10,7 +10,9 @@
 <header>
   <div class="container">
     <div class="logo">
-      <img src={logo} alt="Nera Tech" class="logo-img" />
+      <a href="/">
+        <img src={logo} alt="Nera Tech" class="logo-img" />
+      </a>
     </div>
     
     <button class="mobile-toggle" on:click={toggleMenu} aria-label="Toggle menu">
@@ -20,7 +22,8 @@
     </button>
 
     <nav class="{isMenuOpen ? 'open' : ''}">
-      <a href="#features" on:click={() => isMenuOpen = false}>Recursos</a>
+      <a href="#features" on:click={() => isMenuOpen = false}>Vantagens</a>
+      <a href="#resources" on:click={() => isMenuOpen = false}>Recursos</a>
       <a href="#segments" on:click={() => isMenuOpen = false}>Segmentos</a>
       <a href="#testimonials" on:click={() => isMenuOpen = false}>Depoimentos</a>
       <a href="#contact" on:click={() => isMenuOpen = false}>Fale Conosco</a>
@@ -61,12 +64,28 @@
     font-weight: 500;
     color: white;
     opacity: 0.9;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
   }
 
   nav a:hover {
     color: white;
     opacity: 1;
-    text-decoration: underline;
+  }
+
+  nav a:hover::after {
+    width: 100%;
   }
 
   .mobile-toggle {

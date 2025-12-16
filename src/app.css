@@ -112,3 +112,17 @@ button {
   background-color: var(--secondary);
   color: white;
 }
+
+/* Animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(var(--y));
+  transition: opacity var(--duration) ease-out, transform var(--duration) ease-out;
+  transition-delay: var(--delay);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}

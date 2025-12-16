@@ -1,23 +1,27 @@
+<script>
+  import { fade } from './animate.js';
+</script>
+
 <section class="hero section">
   <div class="container">
     <div class="content">
-      <span class="badge">Nera ERP</span>
-      <h1>O Sistema de Gestão Completo Para o Comércio Moderno</h1>
-      <p class="lead">
+      <span class="badge" use:fade={{ delay: 0 }}>Nera ERP</span>
+      <h1 use:fade={{ delay: 100 }}>O Sistema de Gestão Completo Para o Comércio Moderno</h1>
+      <p class="lead" use:fade={{ delay: 200 }}>
         Controle total de estoque, vendas, financeiro, emissão fiscal e atendimento — tudo em um único sistema poderoso.
       </p>
-      <p class="sub-lead">
+      <p class="sub-lead" use:fade={{ delay: 300 }}>
         Transforme sua empresa com o ERP mais completo do mercado.
       </p>
-      <div class="actions">
+      <div class="actions" use:fade={{ delay: 400 }}>
         <a href="#contact" class="btn btn-primary">Quero uma Demonstração</a>
         <a href="#features" class="btn btn-outline">Saiba Mais</a>
       </div>
-      <p class="target-audience">
+      <p class="target-audience" use:fade={{ delay: 500 }}>
         Ideal para supermercados, lojas de roupas, açaiterias, lanchonetes, bares, distribuidoras, oficinas, transportadoras e varejo em geral.
       </p>
     </div>
-    <div class="image">
+    <div class="image" use:fade={{ delay: 200, duration: 800 }}>
       <!-- Placeholder for hero image -->
       <div class="hero-placeholder">
         <div class="screen">
