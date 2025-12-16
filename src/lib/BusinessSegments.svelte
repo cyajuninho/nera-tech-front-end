@@ -1,12 +1,16 @@
+<script>
+  import { fade } from './animate.js';
+</script>
+
 <section id="segments" class="section">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" use:fade>
       <h2>Módulos Específicos Para Cada Negócio</h2>
       <p>Soluções personalizadas para atender as necessidades do seu segmento</p>
     </div>
 
     <div class="segments-grid">
-      <div class="segment-card">
+      <div class="segment-card" use:fade={{ delay: 0 }}>
         <div class="emoji">🍔</div>
         <h3>Restaurantes e Lanchonetes</h3>
         <ul>
@@ -16,7 +20,7 @@
         </ul>
       </div>
 
-      <div class="segment-card">
+      <div class="segment-card" use:fade={{ delay: 100 }}>
         <div class="emoji">🛍️</div>
         <h3>Lojas de Roupas</h3>
         <ul>
@@ -26,8 +30,8 @@
         </ul>
       </div>
 
-      <div class="segment-card">
-        <div class="emoji">🧊</div>
+      <div class="segment-card" use:fade={{ delay: 200 }}>
+        <div class="emoji">🍨</div>
         <h3>Açaiterias e Sorveterias</h3>
         <ul>
           <li>Integração com balanças</li>
@@ -36,7 +40,7 @@
         </ul>
       </div>
 
-      <div class="segment-card">
+      <div class="segment-card" use:fade={{ delay: 300 }}>
         <div class="emoji">🏪</div>
         <h3>Mercados</h3>
         <ul>
@@ -46,7 +50,7 @@
         </ul>
       </div>
 
-      <div class="segment-card">
+      <div class="segment-card" use:fade={{ delay: 400 }}>
         <div class="emoji">🚚</div>
         <h3>Transportadoras</h3>
         <ul>
@@ -56,8 +60,8 @@
         </ul>
       </div>
 
-      <div class="segment-card">
-        <div class="emoji">🔧</div>
+      <div class="segment-card" use:fade={{ delay: 500 }}>
+        <div class="emoji">🚗</div>
         <h3>Oficinas</h3>
         <ul>
           <li>Ordem de serviço</li>
@@ -93,12 +97,13 @@
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
   }
 
   .segment-card:hover {
     border-color: var(--secondary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: var(--shadow-hover);
   }
 
   .emoji {

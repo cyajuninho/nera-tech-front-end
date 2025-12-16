@@ -1,12 +1,16 @@
-<section class="section bg-light">
+<script>
+  import { fade } from './animate.js';
+</script>
+
+<section id="resources" class="section bg-light">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header" use:fade>
       <h2>Recursos que fazem a diferença</h2>
       <p>Ferramentas poderosas para otimizar cada aspecto do seu negócio</p>
     </div>
 
     <div class="resources-grid">
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 0 }}>
         <div class="icon-box">🛒</div>
         <div class="content">
           <h3>Compras</h3>
@@ -17,7 +21,7 @@
         </div>
       </div>
 
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 100 }}>
         <div class="icon-box">📦</div>
         <div class="content">
           <h3>Produtos / Estoque</h3>
@@ -30,7 +34,7 @@
         </div>
       </div>
 
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 200 }}>
         <div class="icon-box">🧾</div>
         <div class="content">
           <h3>Fiscal Completo</h3>
@@ -48,7 +52,7 @@
         </div>
       </div>
 
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 300 }}>
         <div class="icon-box">💰</div>
         <div class="content">
           <h3>Financeiro Completo</h3>
@@ -63,7 +67,7 @@
         </div>
       </div>
 
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 400 }}>
         <div class="icon-box">📊</div>
         <div class="content">
           <h3>Relatórios Gerenciais</h3>
@@ -71,7 +75,7 @@
         </div>
       </div>
 
-      <div class="resource-item">
+      <div class="resource-item" use:fade={{ delay: 500 }}>
         <div class="icon-box">🔒</div>
         <div class="content">
           <h3>Segurança</h3>
@@ -115,6 +119,13 @@
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .resource-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
 
   .icon-box {

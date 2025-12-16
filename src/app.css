@@ -7,6 +7,13 @@
   --bg-light: #f8fafc;
   --bg-white: #ffffff;
   --max-width: 1200px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
@@ -111,4 +118,18 @@ button {
 .btn-outline:hover {
   background-color: var(--secondary);
   color: white;
+}
+
+/* Animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(var(--y));
+  transition: opacity var(--duration) ease-out, transform var(--duration) ease-out;
+  transition-delay: var(--delay);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
 }

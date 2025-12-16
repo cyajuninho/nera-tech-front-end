@@ -1,14 +1,15 @@
 <script>
   import whatsappIcon from '../assets/whatsapp-icon.svg';
+  import { fade } from './animate.js';
 </script>
 
 <section id="contact" class="section cta-section">
   <div class="container">
     <div class="cta-content">
-      <h2>Quer ver o sistema funcionando ao vivo?</h2>
-      <p>Clique no botão abaixo e fale com um consultor agora mesmo.</p>
+      <h2 use:fade>Quer ver o sistema funcionando ao vivo?</h2>
+      <p use:fade={{ delay: 100 }}>Clique no botão abaixo e fale com um consultor agora mesmo.</p>
       
-      <div class="buttons">
+      <div class="buttons" use:fade={{ delay: 200 }}>
         <a href="https://wa.me/5518981699709?text=Ol%C3%A1,%20vim%20do%20site%20da%20Nera.%20Gostaria%20de%20saber%20mais%20detalhes%20sobre%20o%20Nera%20ERP!" class="btn btn-whatsapp btn-lg">
           <img src={whatsappIcon} alt="WhatsApp" class="icon-svg" /> Chame no WhatsApp
         </a>
